@@ -7,6 +7,33 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <DataGrid x:Name="dgBricks" AutoGenerateColumns="False" Margin="10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ItemID" Binding="{Binding ItemID}"/>
+                <DataGridTextColumn Header="ItemName" Binding="{Binding ItemName}"/>
+                <DataGridTextColumn Header="CategoryName" Binding="{Binding CategoryName}"/>
+                <DataGridTextColumn Header="ColorName" Binding="{Binding ColorName}"/>
+                <DataGridTextColumn Header="Qty" Binding="{Binding Qty}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="10">
+            <TextBox x:Name="txtFilter" Width="200" Margin="10"/>
+            <Button x:Name="btnFilter" Content="Szűrés" Click="btnFilter_Click"/>
+            <ComboBox x:Name="cmbSort" Width="150" Margin="10">
+                <ComboBoxItem>ItemID</ComboBoxItem>
+                <ComboBoxItem>ItemName</ComboBoxItem>
+                <ComboBoxItem>CategoryName</ComboBoxItem>
+                <ComboBoxItem>ColorName</ComboBoxItem>
+                <ComboBoxItem>Qty</ComboBoxItem>
+            </ComboBox>
+            <Button x:Name="btnSort" Content="Rendezés" Click="btnSort_Click"/>
+        </StackPanel>
     </Grid>
 </Window>
