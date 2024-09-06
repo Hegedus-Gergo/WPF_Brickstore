@@ -33,7 +33,7 @@
                 <ComboBoxItem>ColorName</ComboBoxItem>
                 <ComboBoxItem>Qty</ComboBoxItem>
             </ComboBox>
-            <Button x:Name="btnSort" Content="Rendezés" Click="btnSort_Click"/>
+            <Button x:Name="btnSort" Content="Rendezés" Click="BtnSort_Click"/>
         </StackPanel>
     </Grid>
 </Window>
