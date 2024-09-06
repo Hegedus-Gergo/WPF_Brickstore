@@ -21,4 +21,7 @@ namespace WPF_Brickstore
             InitializeComponent();
         }
     }
+
+
+    //teszt kommit
 }
