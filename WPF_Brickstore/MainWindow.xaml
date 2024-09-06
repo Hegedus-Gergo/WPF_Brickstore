@@ -26,14 +26,8 @@
         <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="10">
             <TextBox x:Name="txtFilter" Width="200" Margin="10"/>
             <Button x:Name="btnFilter" Content="Szűrés" Click="btnFilter_Click"/>
-            <ComboBox x:Name="cmbSort" Width="150" Margin="10">
-                <ComboBoxItem>ItemID</ComboBoxItem>
-                <ComboBoxItem>ItemName</ComboBoxItem>
-                <ComboBoxItem>CategoryName</ComboBoxItem>
-                <ComboBoxItem>ColorName</ComboBoxItem>
-                <ComboBoxItem>Qty</ComboBoxItem>
-            </ComboBox>
-            <Button x:Name="btnSort" Content="Rendezés" Click="BtnSort_Click"/>
+            
+            <Button x:Name="btnLoad" Content="Fájl betöltés" Click="BtnLoad_Click"/>
         </StackPanel>
     </Grid>
 </Window>

@@ -55,15 +55,9 @@ namespace WPF_Brickstore
             dgBricks.ItemsSource = bricks;
         }
 
-        private void BtnSort_Click(object sender, RoutedEventArgs e)
-        {
-            var sortColumn = cmbSort.SelectedItem as string;
-            var bricks = dgBricks.ItemsSource as ObservableCollection<Brick>;
-            var sortedBricks = bricks.OrderBy(b => b.GetType().GetProperty(sortColumn).GetValue(b));
-            dgBricks.ItemsSource = sortedBricks;
-        }
+        
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void BtnLoad_Click(object sender, RoutedEventArgs e)
         {
             var openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "BSX fájlok (*.bsx)|*.bsx";
