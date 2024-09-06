@@ -6,7 +6,20 @@
         xmlns:local="clr-namespace:WPF_Brickstore"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
 
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btnImport" Content="Importálás" FontSize="25"/>
+        <TextBox x:Name="txtName" Grid.Column="1" FontSize="25" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="txtId" Grid.Column="2" FontSize="25" VerticalContentAlignment="Center"/>
+        <DataGrid x:Name="dtgContent" Grid.ColumnSpan="5" Grid.Row="2"/>
     </Grid>
 </Window>
