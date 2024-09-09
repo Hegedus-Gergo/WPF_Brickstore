@@ -71,5 +71,5 @@ namespace WPF_Brickstore
 
     
 
-    //teszt kommit
+    //na
 }
