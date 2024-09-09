@@ -52,6 +52,7 @@ namespace WPF_Brickstore
                 bricks.Add(brick);
             }
 
+            txtFilter.IsEnabled = true;
             dgBricks.ItemsSource = bricks;
         }
 
@@ -65,7 +66,6 @@ namespace WPF_Brickstore
             {
                 LoadBricks(openFileDialog.FileName);
             }
-            txtFilter.IsEnabled = true;
         }
     }
 
