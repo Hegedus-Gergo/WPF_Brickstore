@@ -24,7 +24,7 @@ namespace WPF_Brickstore
             InitializeComponent();
         }
 
-        private void btnFilter_Click(object sender, RoutedEventArgs e)
+        private void txtFilter_Changed(object sender, RoutedEventArgs e)
         {
             var filterText = txtFilter.Text;
             var bricks = dgBricks.ItemsSource as ObservableCollection<Brick>;
@@ -65,6 +65,7 @@ namespace WPF_Brickstore
             {
                 LoadBricks(openFileDialog.FileName);
             }
+            txtFilter.IsEnabled = true;
         }
     }
 
