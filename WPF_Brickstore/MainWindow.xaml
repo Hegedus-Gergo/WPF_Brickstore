@@ -16,11 +16,11 @@
         </Grid.RowDefinitions>
         <DataGrid x:Name="dgBricks" AutoGenerateColumns="False" Margin="10">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="ItemID" Binding="{Binding ItemID}"/>
-                <DataGridTextColumn Header="ItemName" Binding="{Binding ItemName}"/>
-                <DataGridTextColumn Header="CategoryName" Binding="{Binding CategoryName}"/>
-                <DataGridTextColumn Header="ColorName" Binding="{Binding ColorName}"/>
-                <DataGridTextColumn Header="Qty" Binding="{Binding Qty}"/>
+                <DataGridTextColumn Header="ID" Binding="{Binding ItemID}"/>
+                <DataGridTextColumn Header="Név" Binding="{Binding ItemName}"/>
+                <DataGridTextColumn Header="Kategória" Binding="{Binding CategoryName}"/>
+                <DataGridTextColumn Header="Szín" Binding="{Binding ColorName}"/>
+                <DataGridTextColumn Header="Db" Binding="{Binding Qty}"/>
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="10">
