@@ -69,7 +69,7 @@ namespace WPF_Brickstore
         }
     }
 
-    
+    //Test commit
 
-    //teszt kommit
+    
 }
