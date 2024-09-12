@@ -1,5 +1,6 @@
 ﻿using Microsoft.Win32;
 using System.Collections.ObjectModel;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,25 +20,32 @@ namespace WPF_Brickstore
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        List<Brick> bricks = new List<Brick>();
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
+        private void Display(List<Brick>? bricks)
+        {
+            throw new NotImplementedException();
+        }
+
         private void txtFilter_Changed(object sender, RoutedEventArgs e)
         {
             var filterText = txtFilter.Text;
-            var bricks = dgBricks.ItemsSource as ObservableCollection<Brick>;
-            var filteredBricks = bricks.Where(b => b.ItemName.StartsWith(filterText) || b.ItemID.StartsWith(filterText));
+            var filteredBricks = bricks.Where(b => b.ItemID.StartsWith(filterText));
+            var filterTextName = "Br";
+            filteredBricks = filteredBricks.Where(b => b.ItemName.StartsWith(filterTextName));
             dgBricks.ItemsSource = filteredBricks;
 
         }
 
-
         private void LoadBricks(string filePath)
         {
             XDocument xaml = XDocument.Load(filePath);
-            var bricks = new ObservableCollection<Brick>();
 
             foreach (var elem in xaml.Descendants("Item"))
             {
@@ -51,12 +59,11 @@ namespace WPF_Brickstore
                 };
                 bricks.Add(brick);
             }
-
             txtFilter.IsEnabled = true;
             dgBricks.ItemsSource = bricks;
         }
 
-        
+
 
         private void BtnLoad_Click(object sender, RoutedEventArgs e)
         {
@@ -69,7 +76,7 @@ namespace WPF_Brickstore
         }
     }
 
-    
+
 
     //aémaf
 }
